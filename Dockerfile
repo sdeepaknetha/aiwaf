@@ -25,4 +25,4 @@ RUN mkdir -p logs
 EXPOSE 5000
 
 # Run with gunicorn instead of Flask's dev server (debug=True) for anything beyond local testing
-CMD ["gunicorn", "--chdir", "app", "--bind", "0.0.0.0:5000", "--workers", "2", "--timeout", "120", "waf_api:app"]
+CMD ["gunicorn", "--chdir", "app", "--bind", "0.0.0.0:5000", "--workers", "1", "--timeout", "120", "waf_api:app"]
