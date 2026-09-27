@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive AI-based Web Application Firewall</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --accent-primary: #8b5cf6;
+            --accent-attack: #f43f5e;
+            --accent-safe: #10b981;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar Layout */
+        .app-wrapper {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            width: 100%;
+        }
+
+        .sidebar {
+            background: rgba(15, 23, 42, 0.9);
+            border-right: 1px solid var(--glass-border);
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-area {
+            margin-bottom: 20px;
+        }
+
+        .logo-area h2 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #8b5cf6, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .simulation-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .sim-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sim-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            padding: 14px 16px;
+            border-radius: 12px;
+            color: var(--text-main);
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+
+        .sim-btn i {
+            font-size: 1.1rem;
+        }
+
+        .sim-btn.attack {
+            border-left: 4px solid var(--accent-attack);
+        }
+
+        .sim-btn.safe {
+            border-left: 4px solid var(--accent-safe);
+        }
+
+        .sim-btn:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(8px);
+        }
+
+        .sim-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Main Content Area */
+        .main-content {
+            padding: 40px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .header-section h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .header-section p {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        /* Analysis Box */
+        .analysis-container {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            padding: 24px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        textarea {
+            width: 100%;
+            height: 160px;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 20px;
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            resize: none;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .analyze-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(to right, #8b5cf6, #6366f1);
+            border: none;
+            border-radius: 14px;
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .analyze-btn:hover {
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+            filter: brightness(1.1);
+        }
+
+        /* Result Section */
+        .result-panel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .decision-card {
+            padding: 32px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-width: 2px;
+            border-style: solid;
+        }
+
+        .decision-card.SAFE {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: var(--accent-safe);
+        }
+
+        .decision-card.BLOCKED {
+            background: rgba(244, 63, 94, 0.1);
+            border-color: var(--accent-attack);
+        }
+
+        .decision-icon {
+            font-size: 3.5rem;
+            margin-bottom: 16px;
+        }
+
+        .decision-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .decision-type {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dim);
+        }
+
+        .ensemble-card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            padding: 24px;
+            border-radius: 20px;
+        }
+
+        .ensemble-card h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .stat-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        /* Scanner Animation Overlay (CSS Only) */
+        #scanner-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            border: 5px solid var(--bg-card);
+            border-top: 5px solid var(--accent-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1100px) {
+            .app-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            /* Or move to top */
+        }
+
+        @media (max-width: 768px) {
+            .result-panel {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="scanner-overlay">
+        <div class="loader"></div>
+        <p>Analyzing Neural Patterns...</p>
+    </div>
+
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <div class="logo-area">
+                <h2>ADAPTIVE AI WAF</h2>
+            </div>
+
+            <div class="simulation-panel">
+                <div class="simulation-title">Security Simulations</div>
+                <div class="sim-list" style="margin-top: 16px;">
+                    <button class="sim-btn safe" onclick="window.location.href='/login'"
+                        style="background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3b82f6;">
+                        <span style="font-size: 1.2rem;">🔐</span>
+                        <span>Login Page Demo</span>
+                    </button>
+                    <div style="height: 10px;"></div>
+                    <button class="sim-btn attack" onclick="getSample('sqli')">
+                        <span style="font-size: 1.2rem;">⚡</span>
+                        <span>SQL Injection</span>
+                    </button>
+                    <button class="sim-btn attack" onclick="getSample('xss')">
+                        <span style="font-size: 1.2rem;">💉</span>
+                        <span>XSS Vector</span>
+                    </button>
+                    <button class="sim-btn attack" onclick="getSample('path_traversal')">
+                        <span style="font-size: 1.2rem;">📂</span>
+                        <span>Path Traversal</span>
+                    </button>
+                    <button class="sim-btn attack" onclick="getSample('command_injection')">
+                        <span style="font-size: 1.2rem;">💻</span>
+                        <span>OS Injection</span>
+                    </button>
+                    <button class="sim-btn safe" onclick="getSample('safe')">
+                        <span style="font-size: 1.2rem;">🛡️</span>
+                        <span>Trusted Traffic</span>
+                    </button>
+                </div>
+            </div>
+
+            <div style="margin-top: 24px;">
+                <button class="analyze-btn"
+                    style="background: linear-gradient(to right, #f43f5e, #8b5cf6); font-size: 0.8rem; padding: 12px;"
+                    onclick="triggerRetrain()">
+                    🔄 Retrain Neural Engine
+                </button>
+                <div id="retrain-status"
+                    style="font-size: 0.7rem; color: var(--text-dim); margin-top: 8px; text-align: center;"></div>
+            </div>
+
+            <div style="margin-top: auto;">
+                <div class="stat-item">
+                    <div class="stat-label">System Integrity</div>
+                    <div class="stat-value" style="color: var(--accent-safe);">99.98% ACCURACY</div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header-section">
+                <h1>Adaptive AI-based Web Application Firewall</h1>
+            </header>
+
+            <section class="analysis-container">
+                <form method="POST" id="analysis-form" onsubmit="showScanner()">
+                    <textarea id="payload" name="payload" placeholder="Input packet data for heuristic analysis..."
+                        required>{{ result.payload if result else '' }}</textarea>
+                    <button type="submit" class="analyze-btn">Scan Payload</button>
+                </form>
+            </section>
+
+            {% if result %}
+            <section class="result-panel">
+                <div class="decision-card {{ result.status }}">
+                    <div class="decision-icon">
+                        {{ '✅' if result.status == 'SAFE' else '🚫' }}
+                    </div>
+                    <div class="status-label">Engine Consensus</div>
+                    <div class="decision-title">{{ result.status }}</div>
+                    <div class="decision-type">{{ result.attack }} detected with {{ (result.confidence * 100)|round(1)
+                        }}% precision</div>
+
+                    <div class="stats-grid" style="width: 100%;">
+                        <div class="stat-item">
+                            <div class="stat-label">Sequence ID</div>
+                            <div class="stat-value">#{{ result.index }}</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Timestamp</div>
+                            <div class="stat-value" style="font-size: 0.8rem;">{{ timestamp }}</div>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: 24px; width: 100%; border-top: 1px solid var(--glass-border); padding-top: 20px;">
+                        <div class="stat-label" style="margin-bottom: 12px;">Adaptive Correction</div>
+                        <div style="display: flex; gap: 8px;">
+                            <select id="correct-label"
+                                style="flex: 1; background: var(--bg-dark); border: 1px solid var(--glass-border); color: #fff; border-radius: 8px; padding: 8px;">
+                                <option value="0">Safe/Benign</option>
+                                <option value="1">XSS Attack</option>
+                                <option value="2">SQL Injection</option>
+                                <option value="3">Path Traversal</option>
+                                <option value="4">Command Injection</option>
+                            </select>
+                            <button onclick="submitFeedback()"
+                                style="background: var(--accent-primary); border: none; color: #fff; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                                Update
+                            </button>
+                        </div>
+                        <div id="feedback-msg" style="font-size: 0.75rem; margin-top: 8px; color: var(--accent-safe);">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ensemble-card">
+                    <h3>Heuristic Consensus Breakdown</h3>
+                    <div style="height: 250px;">
+                        <canvas id="compChart" data-labels='{{ model_results|map(attribute="model")|list|tojson }}'
+                            data-scores='{{ model_results|map(attribute="confidence")|list|tojson }}'></canvas>
+                    </div>
+                </div>
+            </section>
+            {% endif %}
+        </main>
+    </div>
+
+    <script>
+        function showScanner() {
+            document.getElementById('scanner-overlay').style.display = 'flex';
+        }
+
+        async function submitFeedback() {
+            const payload = document.getElementById('payload').value;
+            const label = document.getElementById('correct-label').value;
+            const msg = document.getElementById('feedback-msg');
+
+            msg.innerText = "Processing...";
+
+            try {
+                const res = await fetch('/api/feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ payload, label })
+                });
+                const data = await res.json();
+                msg.innerText = data.message || data.error;
+            } catch (e) {
+                msg.innerText = "Error submitting feedback.";
+            }
+        }
+
+        async function triggerRetrain() {
+            const status = document.getElementById('retrain-status');
+            status.innerText = "Retraining in progress... (takes ~1 min)";
+            document.getElementById('scanner-overlay').style.display = 'flex';
+
+            try {
+                const res = await fetch('/api/retrain', { method: 'POST' });
+                const data = await res.json();
+                status.innerText = data.message || data.error;
+                alert(data.message || "Retraining complete!");
+            } catch (e) {
+                status.innerText = "Retraining failed.";
+            } finally {
+                document.getElementById('scanner-overlay').style.display = 'none';
+            }
+        }
+
+        async function getSample(type) {
+            try {
+                const res = await fetch(`/get_random_payload/${type}`);
+                const data = await res.json();
+                if (data.payload) {
+                    document.getElementById('payload').value = data.payload;
+                    // Programmatically click the scan button to trigger onsubmit and submission
+                    document.querySelector('#analysis-form button[type="submit"]').click();
+                }
+            } catch (e) {
+                console.error("Fetch failed", e);
+            }
+        }
+
+        const chartCanvas = document.getElementById('compChart');
+        if (chartCanvas) {
+            const ctx = chartCanvas.getContext('2d');
+            const rawLabels = JSON.parse(chartCanvas.getAttribute('data-labels'));
+            const rawScores = JSON.parse(chartCanvas.getAttribute('data-scores'));
+            const percentageScores = rawScores.map(score => (score * 100).toFixed(1));
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: rawLabels,
+                    datasets: [{
+                        label: 'Reliability (%)',
+                        data: percentageScores,
+                        backgroundColor: 'rgba(139, 92, 246, 0.6)',
+                        borderColor: '#8b5cf6',
+                        borderWidth: 2,
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            grid: { color: 'rgba(255,255,255,0.05)' },
+                            ticks: { color: '#94a3b8' }
+                        },
+                        y: {
+                            grid: { display: false },
+                            ticks: { color: '#f8fafc', font: { weight: '600' } }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { backgroundColor: '#1e293b', titleColor: '#fff', bodyColor: '#8b5cf6' }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

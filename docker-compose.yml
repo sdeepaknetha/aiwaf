@@ -1,0 +1,12 @@
+services:
+  waf:
+    build: .
+    image: aiwaf:local
+    container_name: aiwaf
+    ports:
+      - "5000:5000"
+    volumes:
+      # Keep logs and any data appended via /api/feedback persistent across restarts
+      - ./logs:/app/logs
+      - ./data:/app/data
+    restart: unless-stopped

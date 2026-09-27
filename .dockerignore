@@ -1,0 +1,9 @@
+venv/
+results/
+logs/*.csv
+.git/
+.github/
+__pycache__/
+*.pyc
+.env
+*.md

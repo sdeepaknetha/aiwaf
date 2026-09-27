@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Blocked</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background-color: #b91c1c;
+            padding: 30px 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        h2 {
+            margin-bottom: 15px;
+        }
+        p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+        .confidence {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>🚫 Request Blocked by Firewall </h2>
+        <p><strong>Attack Type:</strong> {{ attack }}</p>
+        <p class="confidence"><strong>Confidence:</strong> {{ confidence }}</p>
+        <p>This request was blocked to protect the application.</p>
+    </div>
+</body>
+</html>

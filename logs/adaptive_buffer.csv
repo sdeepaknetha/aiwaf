@@ -1,0 +1,106 @@
+timestamp,payload,attack_type,confidence2026-02-01T18:38:43.247408,"1=""1""
+",None,0.0000
+2026-02-01T18:48:30.944638,shashank,None,0.0000
+2026-02-01T18:48:45.748266,hari rao uk,None,0.0000
+2026-02-01T18:48:56.520982,../../../../boot.ini,Path Traversal,0.6636
+2026-02-01T18:49:03.766112,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/boot%2eini
+",Path Traversal,0.6620
+2026-02-01T18:49:11.146971,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/application%2eproperties
+",Path Traversal,0.6650
+2026-02-01T18:50:02.222827,"<svg onload=prompt('IDC0Hz')>
+",None,0.0000
+2026-02-01T18:50:27.271919,"2=""2""",None,0.0000
+2026-02-01T18:52:25.750210,"search=titspi
+",None,0.0000
+2026-02-01T18:52:33.800741,"email=dpsohl@gmail.com
+",None,0.0000
+2026-02-01T18:52:47.808463,"email=shashankreddy2234@gmail.com
+",None,0.0000
+2026-02-01T18:54:17.972678,"2=""2""",None,0.0000
+2026-02-01T18:55:51.767148,%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/config%2ephp,Path Traversal,0.6681
+2026-02-01T18:56:12.207927,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/web%2exml
+",Path Traversal,0.6650
+2026-02-01T18:56:45.983467,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/config%2ephp
+",Path Traversal,0.6681
+2026-02-01T19:40:26.423379,shasank@gmail.com,None,0.0000
+2026-02-01T19:40:36.439422,"sdjvcSDV>//,L;DSMSFMCSDL",None,0.0000
+2026-02-01T19:40:51.362777,%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/windows/system%2eini,Path Traversal,0.6722
+2026-02-01T19:41:02.163887,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/config%2ephp
+",Path Traversal,0.6681
+2026-02-01T19:41:09.227157,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/var/log/auth%2elog
+",Path Traversal,0.6767
+2026-02-01T19:41:14.819567,"../../../../../../../windows/system.ini
+",Path Traversal,0.6664
+2026-02-01T19:41:23.967180,"%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/boot%2eini
+",Path Traversal,0.6651
+2026-02-01T19:41:30.945794,"..//..//..//..//..//config.php
+",Path Traversal,0.6628
+2026-02-01T19:41:35.783571,"../../../../../boot.ini
+",Path Traversal,0.6636
+2026-02-01T19:41:41.022904,"..//..//..//..//boot.ini
+",Path Traversal,0.6636
+2026-02-01T19:41:48.228045,"../../../application.properties
+",Path Traversal,0.6628
+2026-02-01T19:42:05.271475,"../../../application.properties
+",Path Traversal,0.6628
+2026-02-01T19:42:13.183126,"../../../../web.xml
+",Path Traversal,0.6628
+2026-02-01T19:42:23.130108,"..//..//..//..//..//..//..//application.properties
+",Path Traversal,0.6628
+2026-02-01T19:42:28.429145,"../../../../../../../application.properties
+",Path Traversal,0.6628
+2026-02-01T19:42:35.714065,"..//..//..//..//..//..//..//boot.ini
+",Path Traversal,0.6636
+2026-02-01T19:43:21.875784,"..//..//..//..//..//..//..//boot.ini
+",Path Traversal,0.6636
+2026-02-01T19:43:36.776086,"..%2F..%2F..%2Fetc%2Fpasswd
+",None,0.0000
+2026-02-01T19:43:51.581279,"..%5c..%5c..%5cwindows%5csystem32
+",None,0.0000
+2026-02-01T19:48:10.836129,shashajkn,None,0.0000
+2026-02-01T19:48:42.528710,sbhckjas@gmail,None,0.0000
+2026-02-01T19:48:51.997258,vdsavoyUI>'//SFC.sdf,None,0.0000
+2026-02-01T19:49:01.798305,"DSV.,.;.>>>""|'/KJLGFHDF",None,0.0000
+2026-02-01T19:49:35.331988,"username=qnyxpg&password=orykfito
+",None,0.0000
+2026-02-01T19:49:41.889876,"email=qgeejb@gmail.com
+",None,0.0000
+2026-02-02T06:48:58.068347,shahsank ,None,0.0000
+2026-02-02T06:49:15.069343,gopisir@gmail.com,None,0.0000
+2026-02-02T18:00:42.963655,"../../etc/passwd
+",SVM,Path Traversal,0.6779
+2026-02-02T18:00:48.741332,"../../etc/passwd
+",SVM,Path Traversal,0.6779
+2026-02-02T18:05:45.236668,"../../etc/passwd
+",SVM,Path Traversal,0.6779
+2026-02-10T12:57:52.567663,"' OR 1=1 --
+",SQL Injection,0.9500,BLOCKED
+2026-02-10T12:58:08.064985,"' OR 1=1 --
+",SQL Injection,0.9500,BLOCKED
+2026-02-10T12:58:11.393812,"' OR 1=1 --
+",SQL Injection,0.9500,BLOCKED
+2026-02-10T13:01:31.671572,"' OR 1=1 --
+",SQL Injection,0.9500,BLOCKED
+2026-02-10T13:02:12.100781,"' OR 1=1 --
+",SQL Injection,0.9500,BLOCKED
+2026-02-10T13:03:45.282647,"../../etc/passwd
+",Path Traversal,0.9400,BLOCKED
+2026-02-10T13:21:24.302086,' OR 1=1 --,SQL Injection,0.9500,BLOCKED
+2026-02-10T13:21:34.204450,../../etc/passwd,Path Traversal,0.9400,BLOCKED
+2026-02-11T04:47:38.019012,""" UNION SELECT frq0HG,KxpaAN FROM zvi3Rm -- param95"",2
+",SQL Injection,0.9981,BLOCKED
+2026-02-11T04:48:37.778302,../../etc/passwd,Path Traversal,1.0000,BLOCKED
+2026-02-11T04:59:32.784646,"<img src=x onerror=confirm('kaod1R')> param481,1
+",XSS,0.9962,BLOCKED
+2026-02-11T05:09:25.478346,"""' UNION SELECT vnfKj1,k8dxmH FROM AdcPCF --"",2
+",SQL Injection,0.9708,BLOCKED
+2026-02-11T07:09:30.825083,"AND 8NSgZ9eQ85KE --,2",SQL Injection,0.9671
+2026-02-11T07:11:20.430094,"AND 8NSgZ9eQ85KE --,2",SQL Injection,0.9671
+2026-02-11T07:15:12.713436,1' OR '1'='1,SQL Injection,0.9671
+2026-02-11T07:15:13.787990,1' OR '1'='1,SQL Injection,0.9671
+2026-02-11T07:20:16.706542,"<img src=x onerror=alert('Bruq3j')>,1",XSS,0.9689
+2026-02-11T07:26:24.260823,1' OR '1'='1,SQL Injection,0.9671
+2026-02-11T07:30:01.612357,<script>alert(1)</script>,XSS,0.9695
+2026-02-11T07:30:43.639854,<script>alert(1)</script>,XSS,0.9695
+2026-02-11T07:40:22.648717,"OR tSW48pdZsBGp --,2",SQL Injection,0.9671
+2026-02-11T09:12:13.576774,"<script>confirm('3wg1Oi')</script>,1",SQL Injection,0.9992
