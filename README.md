@@ -63,6 +63,6 @@ A simulated login form that runs every submitted username and password through t
 - Render
 
 ## 👨‍💻 Author
-Samala Deepak Kumar
+SAMALA DEEPAK KUMAR NETHA
 
 © 2026 AIWAF
