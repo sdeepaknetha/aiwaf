@@ -42,6 +42,7 @@ A simulated login form that runs every submitted username and password through t
 <p float="left">
   <img src="result3.png" width="45%" />
   <img src="result4.png" width="45%" />
+  <img src="result5.png" width="45%" />
 </p>
 
 ## 🐳 DevOps Pipeline
